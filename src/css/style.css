@@ -1,0 +1,10 @@
+@import '_normalize.css';
+@import '_variables.css';
+@import '_global.css';
+@import '_overall.css';
+
+/*components*/
+@import 'components/_header.css';
+@import 'components/_timer.css';
+@import 'components/_first.css';
+@import 'components/_features.css';

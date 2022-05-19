@@ -1,0 +1,44 @@
+.timer {
+   background-image: url("../../../src/img/timer_bg.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   color: var(--white);
+   display: flex;
+   justify-content: center;
+   padding: 60px 0 78px;
+}
+
+.timer__inner {
+   text-align: center;
+}
+
+.timer__title {
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 50px;
+}
+
+.timer__subtitle {
+   text-transform: lowercase;
+   font-weight: 700;
+   font-size: 30px;
+   margin-top: 29px;
+}
+
+.timer__list {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 38px;
+   font-size: 100px;
+}
+
+.timer__item {
+   text-align: center;
+}
+
+.timer__item span {
+   font-weight: 700;
+   font-size: 24px;
+   display: block;
+}

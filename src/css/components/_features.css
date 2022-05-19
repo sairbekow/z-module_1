@@ -1,0 +1,66 @@
+.features {
+   background-color: var(--mineShaft);
+   padding: 100px 0;
+
+}
+
+.features__title {
+   color: var(--white);
+   font-size: 32px;
+   line-height: 36px;
+   width: 495px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.features__subtitle {
+   color: var(--white);
+   margin-bottom: 5px;
+}
+
+.features__content {
+   margin-top: 45px;
+}
+
+.features__list {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 15px;
+}
+
+.features__item {
+   width: 379px;
+   background-color: var(--white);
+   border-radius: 20px;
+   text-align: center;
+   overflow: hidden;
+}
+
+.features__item-top {
+   height: 293px;
+   overflow: hidden;
+   padding-top: 40px;
+}
+
+.features__item-bottom {
+   background-color: var(--concrete);
+   padding: 48px 0 40px;
+   height: 100%;
+}
+
+.features__item-title {
+   font-size: 24px;
+   margin-bottom: 11px;
+}
+
+.features__item-text {
+   line-height: 22px;
+   width: 286px;
+   font-size: 15px;
+   margin: 0 auto;
+}
+
+.features__item-image {
+   width: 227px;
+}

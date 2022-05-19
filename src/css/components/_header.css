@@ -1,0 +1,32 @@
+.header {
+   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+   padding: 25px 0;
+}
+
+.header__inner {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.header__nav-panel {
+   display: flex;
+   align-items: center;
+}
+
+.menu__list {
+   display: flex;
+}
+
+.menu__item {
+   margin-right: 42px;
+   color: var(--doveGray);
+}
+
+.menu__item:last-child {
+}
+
+.header__btn {
+   padding: 11px 31px;
+}

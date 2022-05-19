@@ -1,0 +1,43 @@
+.first {
+   padding-top: 93px;
+}
+
+.first__inner {
+   display: flex;
+   justify-content: space-between;
+}
+
+.first__content {
+   padding: 45px 0 55px 78px;
+}
+
+.first__title {
+   font-size: 54px;
+   font-weight: 400;
+   line-height: 60px;
+   margin: 11px 0 17px;
+   width: 400px;
+}
+
+.first__text {
+   width: 353px;
+   margin-bottom: 20px;
+}
+
+.first__btn-block {
+   display: flex;
+}
+
+.first__btn {
+   padding: 11px 25px;
+}
+
+.first__btn:first-child {
+   margin-right: 10px;
+}
+
+.first__image {
+   width: 376px;
+   height: 548px;
+   margin-right: 100px;
+}
