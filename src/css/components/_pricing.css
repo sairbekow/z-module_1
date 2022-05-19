@@ -1,0 +1,88 @@
+.pricing {
+   padding: 100px 16px;
+}
+
+.pricing__inner {
+   text-align: center;
+}
+
+.pricing__title {
+   margin-bottom: 13px;
+}
+
+.pricing__subtitle {
+   width: 568px;
+   margin: 0 auto;
+}
+
+.pricing__content {
+   margin-top: 41px;
+}
+
+.pricing__list {
+   display: flex;
+   justify-content: space-between;
+}
+
+.pricing-option {
+   background-color: var(--concrete);
+   width: 379px;
+   border-radius: 20px;
+   padding: 50px 0;
+}
+
+.pricing-option__title {
+   font-size: 18px;
+   line-height: 24px;
+   text-transform: capitalize;
+}
+
+.pricing-option_low-price {
+   color: var(--azureRadiance);
+}
+
+.pricing-option_middle-price {
+   color: var(--outrageousOrange);
+}
+
+.pricing-option_high-price {
+   color: var(--westSide);
+}
+
+
+.pricing-option__price {
+   font-weight: 400;
+   font-size: 108px;
+   letter-spacing: 8px;
+}
+
+.pricing-option__price span{
+   font-size: 14px;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   display: block;
+   margin-top: 25px;
+   color: var(--mineShaft);
+}
+
+.pricing-option_low-price .pricing-option__btn {
+   background-color: var(--azureRadiance);
+}
+
+.pricing-option_middle-price .pricing-option__btn {
+   background-color: var(--outrageousOrange);
+}
+
+.pricing-option_high-price .pricing-option__btn {
+   background-color: var(--westSide);
+}
+
+.pricing-option__btn {
+   border-radius: 4px;
+   letter-spacing: 2px;
+   font-size: 14px;
+   padding: 11px 25px;
+   text-transform: uppercase;
+   color: var(--white);
+   margin-top: 20px;
+}
