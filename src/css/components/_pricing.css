@@ -13,6 +13,7 @@
 .pricing__subtitle {
    width: 568px;
    margin: 0 auto;
+   color: var(--doveGray);
 }
 
 .pricing__content {
