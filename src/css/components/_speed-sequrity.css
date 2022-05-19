@@ -1,31 +1,31 @@
-.speed-sequrity {
+.speed-security{
    padding-top: 100px;
    height: 645px;
    overflow: hidden;
 }
 
-.speed-sequrity__content {
+.speed-security__content {
    padding-top: 77px;
 }
 
-.speed-sequrity__inner {
+.speed-security__inner {
    display: flex;
    justify-content: space-between;
    padding: 0 100px 0 78px;
 }
 
-.speed-sequrity__title {
+.speed-security__title {
    width: 409px;
    margin-top: 5px;
 }
 
-.speed-sequrity__text {
+.speed-security__text {
    width: 403px;
    margin-top: 15px;
    line-height: 24px;
    color: var(--doveGray);
 }
 
-.speed-sequrity__image {
+.speed-security__image {
    width: 376px;
 }

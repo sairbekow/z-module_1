@@ -1,0 +1,31 @@
+.technology {
+   padding-top: 100px;
+   height: 645px;
+   overflow: hidden;
+}
+
+.technology__content {
+   padding-top: 77px;
+}
+
+.technology__inner {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 100px 0 78px;
+}
+
+.technology__title {
+   width: 409px;
+   margin-top: 5px;
+}
+
+.technology__text {
+   width: 403px;
+   margin-top: 15px;
+   line-height: 24px;
+   color: var(--doveGray);
+}
+
+.technology__image {
+   width: 376px;
+}

@@ -1,13 +1,10 @@
 .features {
    background-color: var(--mineShaft);
    padding: 100px 0;
-
 }
 
 .features__title {
    color: var(--white);
-   font-size: 32px;
-   line-height: 36px;
    width: 495px;
    margin: 0 auto;
    text-align: center;
@@ -16,6 +13,7 @@
 .features__subtitle {
    color: var(--white);
    margin-bottom: 5px;
+   text-align: center;
 }
 
 .features__content {
