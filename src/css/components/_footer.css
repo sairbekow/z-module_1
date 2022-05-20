@@ -1,0 +1,16 @@
+.footer {
+   padding: 100px 0;
+}
+
+.footer__content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.footer__networks {
+   margin-top: 27px;
+   display: flex;
+   width: 106px;
+   justify-content: space-between;
+}

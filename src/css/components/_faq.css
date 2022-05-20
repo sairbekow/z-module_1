@@ -1,0 +1,38 @@
+.faq {
+   background-color: var(--concrete);
+   padding: 105px 0 110px;
+}
+
+.faq__title {
+   text-transform: uppercase;
+   margin-bottom: 13px;
+}
+
+.faq__subtitle {
+   font-size: 15px;
+   margin-bottom: 42px;
+}
+
+.faq__list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.faq__item:nth-child(3) {
+   margin-top: 26px;
+}
+
+.faq__item:nth-child(4) {
+   margin-top: 26px;
+}
+
+.faq__item-title {
+   margin-bottom: 10px;
+   font-size: 18px;
+}
+
+.faq__item-text {
+   width: 558px;
+   line-height: 24px;
+}

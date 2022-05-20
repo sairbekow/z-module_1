@@ -1,0 +1,27 @@
+.download {
+   padding: 100px 0 140px;
+}
+
+.download__header {
+   text-align: center;
+}
+
+.download__title {
+   margin-top: 5px;
+   margin-bottom: 14px;
+}
+
+.download__subtitle {
+   width: 589px;
+   margin: 0 auto;
+   padding-bottom: 20px;
+   color: var(--doveGray);
+}
+
+.download__btn {
+   display: block;
+   margin: 0 auto;
+}
+
+
+
