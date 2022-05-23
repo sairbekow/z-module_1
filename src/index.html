@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -496,7 +496,6 @@
                 Etiam ut orci varius, faucibus libero ac, cursus quam. Aenean porta neque eget consequat fringilla.
               </p>
             </li>
-
           </ul>
         </div>
       </div>
@@ -527,6 +526,70 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal">
+    <div class="overlay"></div>
+    <div class="modal__inner">
+      <h4 class="modal__title">
+        Leave a request for the purchase of goods
+      </h4>
+
+      <form class="form">
+        <div class="form__input-block">
+          <input class="form__input" type="text" placeholder="username">
+          <input class="form__input" type="email" placeholder="email">
+        </div>
+
+        <div class="plan">
+          <p class="plan__title">Your plan?</p>
+          <ul class="plan__list">
+            <li class="plan__item low-price plan__item_selected">
+                standart
+            </li>
+
+            <li class="plan__item middle-price plan__item_selected">
+                premium
+            </li>
+
+            <li class="plan__item high-price plan__item_selected">
+                lifetime
+            </li>
+          </ul>
+        </div>
+
+        <div class="questionnaire">
+          <p class="questionnaire__title">
+            How did you know about our app?
+          </p>
+          <ul class="questionnaire__list">
+            <li class="questionnaire__item">
+              <input id="facebook" type="checkbox">
+              <label for="facebook"></label>
+              <span>Facebook</span>
+            </li>
+            <li class="questionnaire__item">
+              <input id="instagram" type="checkbox">
+              <label for="instagram"></label>
+              <span>Instagram</span>
+            </li>
+            <li class="questionnaire__item">
+              <input id="youtube" type="checkbox">
+              <label for="youtube"></label>
+              <span>Youtube</span>
+            </li>
+            <li class="questionnaire__item">
+              <input id="other" type="checkbox">
+              <label for="other"></label>
+              <span>Other</span>
+            </li>
+          </ul>
+        </div>
+        <button class="form__btn btn" type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
 
 </div>
 </body>

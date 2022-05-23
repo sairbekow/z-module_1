@@ -9,6 +9,7 @@ body {
    font-family: 'Poppins', sans-serif;
    color: var(--mineShaft);
    font-size: 16px;
+   position: relative;
 }
 
 
@@ -43,4 +44,9 @@ button {
    border: none;
    background-color: transparent;
    cursor: pointer;
+}
+
+input {
+   border: none;
+   outline: none;
 }
