@@ -1,5 +1,5 @@
 .footer {
-   padding: 100px 0;
+   padding: 125px 0;
 }
 
 .footer__content {
@@ -13,4 +13,11 @@
    display: flex;
    width: 106px;
    justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+   .footer {
+      transform: scale(0.8);
+      padding: 70px 0;
+   }
 }

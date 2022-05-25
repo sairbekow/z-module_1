@@ -1,8 +1,5 @@
 .download {
    padding: 100px 0 140px;
-}
-
-.download__header {
    text-align: center;
 }
 
@@ -12,16 +9,19 @@
 }
 
 .download__subtitle {
-   width: 589px;
+   max-width: 589px;
    margin: 0 auto;
-   padding-bottom: 20px;
-   color: var(--doveGray);
+   padding-bottom: 25px;
 }
 
-.download__btn {
-   display: block;
-   margin: 0 auto;
+.download__link {
+   display: inline-block;
 }
 
+@media (max-width: 750px) {
+   .download {
+      padding: 80px 0;
+   }
+}
 
 

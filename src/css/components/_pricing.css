@@ -1,5 +1,5 @@
 .pricing {
-   padding: 100px 16px;
+   padding: 100px 0;
 }
 
 .pricing__inner {
@@ -7,13 +7,13 @@
 }
 
 .pricing__title {
+   margin-top: 10px;
    margin-bottom: 13px;
 }
 
 .pricing__subtitle {
-   width: 568px;
+   max-width: 568px;
    margin: 0 auto;
-   color: var(--doveGray);
 }
 
 .pricing__content {
@@ -55,6 +55,7 @@
    font-weight: 400;
    font-size: 108px;
    letter-spacing: 8px;
+   margin-top: -10px;
 }
 
 .pricing-option__price span{
@@ -86,4 +87,34 @@
    text-transform: uppercase;
    color: var(--white);
    margin-top: 20px;
+}
+
+@media (max-width: 1185px) {
+   .pricing-option {
+      transform: scale(0.95)
+   }
+}
+
+@media (max-width: 950px) {
+   .pricing-option__price {
+      font-size: 78px;
+   }
+
+   .pricing {
+      padding: 80px 0;
+   }
+}
+
+
+@media (max-width: 750px) {
+   .pricing-option {
+      transform: scale(1);
+      width: 300px;
+   }
+
+   .pricing__list {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+   }
 }

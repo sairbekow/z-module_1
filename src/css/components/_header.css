@@ -30,3 +30,14 @@
 .header__btn {
    padding: 11px 31px;
 }
+
+@media (max-width: 835px) {
+   .menu {
+      display: none;
+   }
+
+   .header__btn {
+      display: none;
+   }
+}
+

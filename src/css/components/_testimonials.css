@@ -9,7 +9,6 @@
 
 .testimonials__subtitle {
    margin: 14px 0 41px;
-   color: var(--doveGray);
 }
 
 .testimonials__list {
@@ -18,8 +17,8 @@
 }
 
 .comment {
-   width: 379px;
-   height: 224px;
+   max-width: 379px;
+   min-height: 224px;
    background-color: var(--white);
    padding: 30px;
    border-radius: 20px;
@@ -30,12 +29,27 @@
 }
 
 .comment__author {
-}
-
-.comment__author-name {
-   margin-bottom: 2px;
+   margin-bottom: 3px;
+   margin-top: 5px;
 }
 
 .comment__author-proffession {
    font-size: 14px;
+}
+
+@media (max-width: 1185px) {
+   .comment {
+      transform: scale(0.95)
+   }
+}
+
+@media (max-width: 750px) {
+   .testimonials {
+      padding: 60px 0;
+   }
+
+   .testimonials__list {
+      flex-direction: column;
+      align-items: center;
+   }
 }

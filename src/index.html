@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="wrapper">
+
   <header class="header">
     <div class="container">
       <div class="header__inner">
@@ -19,13 +20,13 @@
         <div class="header__nav-panel">
           <nav class="menu">
             <ul class="menu__list">
-              <li class="menu__item"><a href="#features">Features</a></li>
-              <li class="menu__item"><a href="#pricing">Pricing</a></li>
-              <li class="menu__item"><a href="#testimonials">Testimonials</a></li>
-              <li class="menu__item"><a href="#FAQ">FAQ</a></li>
+              <li class="menu__item"><a class="menu__item-link" href="#features">Features</a></li>
+              <li class="menu__item"><a class="menu__item-link" href="#pricing">Pricing</a></li>
+              <li class="menu__item"><a class="menu__item-link" href="#testimonials">Testimonials</a></li>
+              <li class="menu__item"><a class="menu__item-link" href="#faq">FAQ</a></li>
             </ul>
           </nav>
-          <button class="header__btn btn">
+          <button type="button" class="header__btn btn buy-btn">
             Get this app
           </button>
         </div>
@@ -76,8 +77,8 @@
             check it out!
           </p>
           <div class="first__btn-block">
-            <button class="first__btn btn">buy now</button>
-            <button class="first__btn btn">Read more</button>
+            <button type="button" class="first__btn btn buy-btn">buy now</button>
+            <button type="button" class="first__btn btn">Read more</button>
           </div>
         </div>
         <img class="first__image" src="./img/first.png" alt="beer">
@@ -85,7 +86,7 @@
     </div>
   </section>
 
-  <section class="features">
+  <section id="features" class="features">
     <div class="container">
       <div class="features__inner">
         <p class="features__name section-name">
@@ -100,6 +101,8 @@
               <div class="features__item-top">
                 <img src="./img/features_1.png" alt="abstraction" class="features__item-image">
               </div>
+              <img class="features__icon" src="./img/features-calendar.svg" alt="calendar">
+
               <div class="features__item-bottom">
                 <h4 class="features__item-title">
                   Calendar view
@@ -114,6 +117,7 @@
               <div class="features__item-top">
                 <img src="./img/features_2.png" alt="abstraction" class="features__item-image">
               </div>
+              <img class="features__icon" src="./img/features-lists.svg" alt="list">
               <div class="features__item-bottom">
                 <h4 class="features__item-title">
                   Lists
@@ -128,6 +132,7 @@
               <div class="features__item-top">
                 <img src="./img/features_3.png" alt="abstraction" class="features__item-image">
               </div>
+              <img class="features__icon" src="./img/features-varied_type.svg" alt="Aa">
               <div class="features__item-bottom">
                 <h4 class="features__item-title">
                   Varied type
@@ -142,6 +147,7 @@
               <div class="features__item-top">
                 <img src="./img/features_4.png" alt="abstraction" class="features__item-image">
               </div>
+              <img class="features__icon" src="./img/features-split_screen.svg" alt="split screen">
               <div class="features__item-bottom">
                 <h4 class="features__item-title">
                   Split-screen
@@ -156,6 +162,7 @@
               <div class="features__item-top">
                 <img src="./img/features_5.png" alt="abstraction" class="features__item-image">
               </div>
+              <img class="features__icon" src="./img/features-uploads.svg" alt="arrow top">
               <div class="features__item-bottom">
                 <h4 class="features__item-title">
                   Uploads
@@ -170,6 +177,7 @@
               <div class="features__item-top">
                 <img src="./img/features_6.png" alt="abstraction" class="features__item-image">
               </div>
+              <img class="features__icon" src="./img/features-focus_mode.svg" alt="eye">
               <div class="features__item-bottom">
                 <h4 class="features__item-title">
                   Focus mode
@@ -199,7 +207,7 @@
             <span>Operations per minute</span>
           </li>
           <li class="statistics__item">
-            95+
+            95%
             <span>Accuracy</span>
           </li>
         </ul>
@@ -256,7 +264,7 @@
     </div>
   </section>
 
-  <section class="dark-mode">
+  <section class="dark-mode dark-regime">
     <div class="container">
       <div class="dark-mode__inner">
 
@@ -265,9 +273,9 @@
             Dark mode
           </h4>
           <h3 class="dark-mode__title title">
-            Also available in <span>dark</span>.
+            Also available in <span class="color-mode">dark</span>.
           </h3>
-          <p class="dark-mode__subtitle">
+          <p class="dark-mode__subtitle subtitle">
             Don't get blinded when using the H(app)y app at night,
             just turn off the lights. Lorem ipsum dolor sit amet.
           </p>
@@ -276,7 +284,7 @@
           <img class="dark-mode__image" src="./img/dark-mode.png" alt="design of house">
         </div>
         <div class="dark-mode__toggle-block">
-          <button class="dark-mode__btn">
+          <button type="button" class="dark-mode__btn light-btn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                   d="M12.0204 5.43641C8.44348 5.42817 5.54687 8.31015 5.54137 11.8775C5.53589 15.4449 8.41605 18.3517 11.96 18.3627C15.5451 18.3709 18.4445 15.4862 18.45 11.905C18.45 8.33492 15.5781 5.44193 12.0204 5.43641ZM5.59898 15.5715C5.34663 15.1531 4.81997 15.01 4.37286 15.2412C4.24668 15.3073 4.12599 15.3816 4.00255 15.4532C3.3168 15.8495 2.62831 16.2404 1.94804 16.645C1.55853 16.8763 1.40492 17.3002 1.5311 17.7158C1.65179 18.1094 2.00839 18.3709 2.44727 18.3682C2.5707 18.3792 2.7106 18.3434 2.83677 18.2718C3.66791 17.7956 4.50452 17.3277 5.32468 16.8295C5.75808 16.5652 5.86231 16.0064 5.59898 15.5715ZM18.3101 8.02387C18.4253 8.39823 18.7929 8.67349 19.1851 8.67624C19.3305 8.68175 19.4731 8.65147 19.5966 8.58265C20.4359 8.1037 21.278 7.63025 22.1037 7.13478C22.5233 6.88154 22.6358 6.33928 22.3999 5.91813C22.1613 5.49423 21.6456 5.29604 21.2149 5.53001C20.3454 6.00346 19.4923 6.50168 18.6447 7.01092C18.3128 7.21461 18.1949 7.64677 18.3101 8.02387ZM12.1932 4.6189C12.7089 4.61615 13.1093 4.20601 13.1121 3.6665C13.1148 3.21507 13.1121 2.76089 13.1121 2.30946V0.927656C13.1011 0.404661 12.7034 0.00278038 12.1959 1.38189e-05C11.6775 -0.00272483 11.266 0.401908 11.2633 0.935914C11.2578 1.84978 11.2578 2.76364 11.2633 3.67751C11.266 4.20876 11.6775 4.6189 12.1932 4.6189ZM12.1959 19.3784C11.6775 19.3756 11.266 19.7803 11.2633 20.3143C11.2578 21.2281 11.2578 22.142 11.2633 23.0559C11.266 23.5899 11.6747 24 12.1904 24C12.7061 23.9972 13.1066 23.5871 13.1093 23.0476C13.1121 22.5962 13.1093 22.142 13.1093 21.6878V20.306C13.1011 19.7858 12.7034 19.3811 12.1959 19.3784ZM3.67888 12.8299C4.20005 12.8272 4.5923 12.4556 4.61424 11.9491C4.63619 11.4399 4.2604 10.9967 3.73648 10.9857C2.78466 10.9664 1.83283 10.9664 0.883752 10.9857C0.373552 10.9967 -0.0159552 11.4426 0.000502815 11.9271C0.0114749 12.4391 0.420183 12.8272 0.944098 12.8299C1.40492 12.8327 1.86301 12.8299 2.32383 12.8299C2.77643 12.8299 3.22628 12.8327 3.67888 12.8299ZM23.1186 10.9857C22.1668 10.9664 21.2149 10.9664 20.2659 10.9857C19.7557 10.9967 19.3661 11.4426 19.3826 11.9271C19.3963 12.4363 19.805 12.8272 20.3289 12.8299C20.7898 12.8327 21.2478 12.8299 21.7087 12.8299C22.1613 12.8299 22.6111 12.8327 23.0637 12.8299C23.5849 12.8272 23.9771 12.4556 23.9991 11.9491C24.021 11.4399 23.6452 10.9967 23.1186 10.9857ZM16.2501 5.81628C16.5738 5.81078 16.8481 5.68966 17.0126 5.41165C17.5064 4.58036 17.9974 3.74357 18.4637 2.89852C18.6996 2.47187 18.5213 1.94061 18.1044 1.69839C17.6847 1.4534 17.1388 1.54974 16.8865 1.96539C16.379 2.79943 15.8853 3.64173 15.4244 4.50054C15.1035 5.10061 15.5726 5.81353 16.2501 5.81628ZM22.0488 16.645C21.2588 16.1798 20.4633 15.7174 19.6651 15.2687C19.1906 15.0017 18.6475 15.1531 18.3896 15.6018C18.1236 16.0642 18.2772 16.5982 18.7709 16.8845C19.5362 17.3304 20.3043 17.7736 21.0723 18.214C21.2314 18.3049 21.3987 18.3792 21.577 18.3654C21.9994 18.3654 22.3643 18.0929 22.4767 17.7075C22.5974 17.2947 22.4383 16.8763 22.0488 16.645ZM7.04181 5.16667C7.2201 5.46946 7.48892 5.62911 7.84551 5.62639C8.55595 5.6236 8.99483 4.88866 8.64647 4.25556C8.19661 3.44354 7.7303 2.63978 7.25576 1.84427C6.98146 1.38459 6.44109 1.25522 5.99672 1.51396C5.5551 1.77546 5.40149 2.31222 5.66207 2.77741C6.11467 3.57842 6.57824 4.37392 7.04181 5.16667ZM1.9645 7.20085C2.749 7.66053 3.53898 8.11196 4.32623 8.56889C4.47435 8.65422 4.6307 8.69826 4.75139 8.69276C5.21496 8.69001 5.57704 8.42025 5.6895 8.03213C5.80471 7.62475 5.65384 7.2036 5.27805 6.98339C4.48258 6.51269 3.68162 6.0475 2.87518 5.59332C2.40338 5.32632 1.85203 5.48322 1.59968 5.93189C1.33909 6.39433 1.48447 6.92008 1.9645 7.20085ZM8.42703 18.492C7.96346 18.2168 7.41486 18.3709 7.1241 18.8691C6.67699 19.6371 6.23536 20.4078 5.79099 21.1758C5.70322 21.33 5.63739 21.4896 5.64836 21.6575C5.64561 22.0924 5.90894 22.4503 6.30119 22.5659C6.71813 22.6898 7.13507 22.5356 7.36548 22.1475C7.82631 21.3685 8.27342 20.584 8.72327 19.7995C9.00306 19.3096 8.87688 18.759 8.42703 18.492ZM16.9715 18.671C16.678 18.17 16.1321 18.0158 15.6713 18.2883C15.2215 18.5553 15.0925 19.1059 15.3723 19.5958C15.5945 19.9895 15.8249 20.3776 16.0526 20.7712C16.283 21.1703 16.5024 21.5722 16.7438 21.9658C16.9742 22.3429 17.4104 22.4943 17.8191 22.365C18.1949 22.2466 18.45 21.886 18.45 21.4401C18.461 21.2969 18.3979 21.1345 18.3101 20.9804C17.863 20.2097 17.4214 19.4389 16.9715 18.671Z"
@@ -284,11 +292,11 @@
             </svg>
             <span>Light Mode</span>
           </button>
-          <button class="dark-mode__btn">
+          <button type="button" class="dark-mode__btn dark-btn">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                   d="M7.43316 5.34005C7.43316 3.63645 7.83911 2.03985 8.53031 0.599617C8.75522 0.127769 8.56322 -0.121872 8.07225 0.0591861C3.36549 1.81216 0 6.3002 0 11.614C0 18.453 5.54333 24 12.384 24C17.697 24 22.187 20.634 23.9397 15.9319C24.1235 15.4409 23.8711 15.2489 23.3994 15.4738C21.9566 16.1624 20.3603 16.5684 18.657 16.5684C12.4553 16.5656 7.43316 11.5399 7.43316 5.34005Z"
-                  fill="#FF9209"/>
+                  fill="black"/>
             </svg>
             <span>Dark Mode</span>
           </button>
@@ -297,7 +305,7 @@
     </div>
   </section>
 
-  <section class="pricing">
+  <section id="pricing" class="pricing">
     <div class="container">
       <div class="pricing__inner">
 
@@ -308,7 +316,7 @@
           <h3 class="pricing__title title">
             A plan for every need.
           </h3>
-          <p class="pricing__subtitle">
+          <p class="pricing__subtitle subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Nullam scelerisque aliquam odio et faucibus.
           </p>
@@ -320,11 +328,10 @@
               <h5 class="pricing-option__title">
                 Standard
               </h5>
-              <p class="pricing-option__price">
-                $9
+              <p id="standart" class="pricing-option__price">
                 <span>monthly</span>
               </p>
-              <button class="pricing-option__btn">
+              <button type="button" class="pricing-option__btn buy-btn">
                 buy now
               </button>
             </li>
@@ -333,11 +340,10 @@
               <h5 class="pricing-option__title">
                 Premium
               </h5>
-              <p class="pricing-option__price">
-                $99
+              <p id="premium" class="pricing-option__price">
                 <span>Annually</span>
               </p>
-              <button class="pricing-option__btn">
+              <button type="button" class="pricing-option__btn buy-btn">
                 buy now
               </button>
             </li>
@@ -346,11 +352,10 @@
               <h5 class="pricing-option__title">
                 lifetime
               </h5>
-              <p class="pricing-option__price">
-                $149
+              <p id="lifetime" class="pricing-option__price">
                 <span>Up front</span>
               </p>
-              <button class="pricing-option__btn">
+              <button type="button" class="pricing-option__btn buy-btn">
                 buy now
               </button>
             </li>
@@ -360,7 +365,7 @@
     </div>
   </section>
 
-  <section class="testimonials">
+  <section id="testimonials" class="testimonials">
     <div class="container">
       <div class="testimonials__inner">
 
@@ -371,54 +376,33 @@
           <h3 class="testimonials__title title">
             Don't take our word for it.
           </h3>
-          <p class="testimonials__subtitle">See what our customers are saying.</p>
+          <p class="testimonials__subtitle subtitle">See what our customers are saying.</p>
         </div>
 
         <div class="testimonials__content">
           <ul class="testimonials__list">
 
             <li class="comment">
-              <p class="comment__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique. Duis cursus.
-              </p>
+              <p class="comment__text"></p>
               <div class="comment__author">
-                <p class="comment__author-name">
-                  Pam Beesly
-                </p>
-                <p class="comment__author-proffession">
-                  Top Manager Happy Co
-                </p>
+                <p class="comment__author-name"></p>
+                <p class="comment__author-proffession"></p>
               </div>
             </li>
 
             <li class="comment">
-              <p class="comment__text">
-                Nulla efficitur auctor hendrerit. Etiam ut orci varius,
-                faucibus libero ac, cursus quam. Aenean porta neque eget consequat fringilla.
-              </p>
+              <p class="comment__text"></p>
               <div class="comment__author">
-                <p class="comment__author">
-                  Michael Scott
-                </p>
-                <p class="comment__author-proffession">
-                  SMM Specialist
-                </p>
+                <p class="comment__author-name"></p>
+                <p class="comment__author-proffession"></p>
               </div>
             </li>
 
             <li class="comment">
-              <p class="comment__text">
-                Vestibulum ultrices, orci nec egestas pharetra,
-                ligula est semper enim, nec auctor sapien leo nec purus.
-              </p>
+              <p class="comment__text"></p>
               <div class="comment__author">
-                <p class="comment__author">
-                  Angels Schrute
-                </p>
-                <p class="comment__author-proffession">
-                  CEO and CoFounder
-                </p>
+                <p class="comment__author-name"></p>
+                <p class="comment__author-proffession"></p>
               </div>
             </li>
           </ul>
@@ -437,20 +421,20 @@
           <h3 class="download__title title">
             It's available right now!
           </h3>
-          <p class="download__subtitle">
+          <p class="download__subtitle subtitle">
             Duis tristique sed lorem a vestibulum.
             Cras commodo consequat orci, in convallis risus egestas non.
           </p>
         </div>
 
-        <button class="download__btn">
+        <a href="#" class="download__link">
           <img class="download__image" src="./img/app-store.svg" alt="app store">
-        </button>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="faq">
+  <section id="faq" class="faq">
     <div class="container">
       <div class="faq__inner">
         <h3 class="faq__title title">
@@ -527,67 +511,80 @@
     </div>
   </footer>
 
-  <div class="modal">
-    <div class="overlay"></div>
+  <div class="modal d-none">
     <div class="modal__inner">
-      <h4 class="modal__title">
-        Leave a request for the purchase of goods
-      </h4>
-
-      <form class="form">
-        <div class="form__input-block">
-          <input class="form__input" type="text" placeholder="username">
-          <input class="form__input" type="email" placeholder="email">
-        </div>
-
-        <div class="plan">
-          <p class="plan__title">Your plan?</p>
-          <ul class="plan__list">
-            <li class="plan__item low-price plan__item_selected">
-                standart
-            </li>
-
-            <li class="plan__item middle-price plan__item_selected">
-                premium
-            </li>
-
-            <li class="plan__item high-price plan__item_selected">
-                lifetime
-            </li>
-          </ul>
-        </div>
-
-        <div class="questionnaire">
-          <p class="questionnaire__title">
-            How did you know about our app?
-          </p>
-          <ul class="questionnaire__list">
-            <li class="questionnaire__item">
-              <input id="facebook" type="checkbox">
-              <label for="facebook"></label>
-              <span>Facebook</span>
-            </li>
-            <li class="questionnaire__item">
-              <input id="instagram" type="checkbox">
-              <label for="instagram"></label>
-              <span>Instagram</span>
-            </li>
-            <li class="questionnaire__item">
-              <input id="youtube" type="checkbox">
-              <label for="youtube"></label>
-              <span>Youtube</span>
-            </li>
-            <li class="questionnaire__item">
-              <input id="other" type="checkbox">
-              <label for="other"></label>
-              <span>Other</span>
-            </li>
-          </ul>
-        </div>
-        <button class="form__btn btn" type="submit">
-          Send
+      <div class="modal__block">
+        <button class="modal__close-btn">
+          <img src="./img/close.svg" alt="x">
         </button>
-      </form>
+        <h4 class="modal__title">
+          Leave a request for the purchase of goods
+        </h4>
+
+        <form class="form">
+          <div class="form__input-block">
+            <input class="form__input" type="text" placeholder="username">
+            <input class="form__input" type="email" placeholder="email">
+          </div>
+
+          <div class="plan">
+            <p class="plan__title">Your plan?</p>
+            <ul class="plan__list">
+              <li class="plan__item plan__item_low-price">
+                <input name="plan" id="low-price" type="radio">
+                <label for="low-price">
+                  standart
+                </label>
+              </li>
+
+              <li class="plan__item plan__item_middle-price">
+                <input name="plan" id="middle-price" type="radio">
+                <label for="middle-price">
+                  premium
+                </label>
+              </li>
+
+              <li class="plan__item plan__item_high-price">
+                <input name="plan" id="high-price" type="radio">
+                <label for="high-price">
+                  lifetime
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="questionnaire">
+            <p class="questionnaire__title">
+              How did you know about our app?
+            </p>
+            <ul class="questionnaire__list">
+              <li class="questionnaire__item">
+                <input id="facebook" type="checkbox">
+                <label for="facebook"></label>
+                <span>Facebook</span>
+              </li>
+              <li class="questionnaire__item">
+                <input id="instagram" type="checkbox">
+                <label for="instagram"></label>
+                <span>Instagram</span>
+              </li>
+              <li class="questionnaire__item">
+                <input id="youtube" type="checkbox">
+                <label for="youtube"></label>
+                <span>Youtube</span>
+              </li>
+              <li class="questionnaire__item">
+                <input id="other" type="checkbox">
+                <label for="other"></label>
+                <span>Other</span>
+              </li>
+            </ul>
+          </div>
+          <button class="form__btn btn" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 

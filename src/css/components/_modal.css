@@ -1,28 +1,28 @@
 .modal {
-   display: none;
-}
-
-.overlay {
    width: 100%;
    height: 100%;
-   background-color: var(--black);
-   opacity: 0.35;
-   position: fixed;
-   left: 0;
+   background-color: rgba(0, 0, 0, 0.35);
+   position: absolute;
    top: 0;
+   left: 0;
 }
 
 .modal__inner {
    width: 506px;
    padding: 38px 88px 57px;
-   position: fixed;
+   position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
    opacity: 1;
    text-align: center;
    background-color: var(--white);
+   border-radius: 4px;
    color: var(--black);
+}
+
+.modal__block {
+   position: relative;
 }
 
 .modal__title {
@@ -30,6 +30,12 @@
    margin-bottom: 42px;
    font-size: 20px;
    line-height: 30px;
+}
+
+.modal__close-btn {
+   position: absolute;
+   right: -65px;
+   top: -15px;
 }
 
 .form__input {
@@ -43,59 +49,48 @@
    margin-bottom: 17px;
 }
 
+.form__btn {
+   margin-top: 16px;
+   padding: 11px 65px;
+}
+
 .plan {
    margin-top: 23px;
    margin-bottom: 42px;
 }
 
-.plan__item {
-   margin-bottom: 11px;
-   position: relative;
+.plan__item input {
+   display: none;
+}
+
+.plan__item label {
    width: 330px;
+   position: relative;
+   cursor: pointer;
    display: inline-block;
+   margin-bottom: 11px;
    padding: 11px 15px;
    border: 1px solid;
    border-radius: 4px;
-   cursor: pointer;
    text-transform: capitalize;
 }
 
-.low-price {
+.plan__item_low-price {
    border-color: var(--azureRadiance);
    color: var(--azureRadiance);
 }
 
-.middle-price {
+.plan__item_middle-price {
    border-color: var(--outrageousOrange);
    color: var(--outrageousOrange);
 }
 
-.high-price {
+.plan__item_high-price {
    border-color: var(--westSide);
    color: var(--westSide);
 }
 
-.low-price.plan__item_selected {
-   background-color: var(--azureRadiance);
-}
-
-.middle-price.plan__item_selected {
-   background-color: var(--outrageousOrange);
-}
-
-.high-price.plan__item_selected {
-   background-color: var(--westSide);
-}
-
-.plan__title {
-   margin-bottom: 11px;
-}
-
-.plan__item_selected {
-   color: var(--white);
-}
-
-.plan__item_selected::before {
+.plan__item input:checked + label:before {
    content: '';
    left: 15px;
    top: 14px;
@@ -104,6 +99,29 @@
    position: absolute;
    background-image: url("../../img/check.svg");
 }
+
+.plan__item_low-price input:checked + label {
+   color: var(--white);
+   background-color: var(--azureRadiance);
+   border-color: var(--azureRadiance);
+}
+
+.plan__item_middle-price input:checked + label {
+   color: var(--white);
+   background-color: var(--outrageousOrange);
+   border-color: var(--outrageousOrange);
+}
+
+.plan__item_high-price input:checked + label {
+   color: var(--white);
+   background-color: var(--westSide);
+   border-color: var(--westSide);
+}
+
+.plan__title {
+   margin-bottom: 11px;
+}
+
 
 .questionnaire {
    display: flex;
@@ -140,10 +158,5 @@
    background-image: url("../../img/checkbox.svg");
    background-repeat: no-repeat;
    background-position: 0.5px 2px;
-}
-
-.form__btn {
-   margin-top: 16px;
-   padding: 11px 65px;
 }
 

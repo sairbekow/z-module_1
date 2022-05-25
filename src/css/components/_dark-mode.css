@@ -1,15 +1,17 @@
 .dark-mode {
-   background-color: #222;
-   padding: 100px 160px;
+   background-color: var(--mineShaft);
+   padding: 100px 0 160px;
+   transition-duration: 0.3s;
+   color: var(--white);
 }
 
 .dark-mode__header {
-   color: var(--white);
    margin-bottom: 36px;
    text-align: center;
 }
 
 .dark-mode__title {
+   color: inherit;
    margin-bottom: 14px;
    margin-top: 5px;
 }
@@ -19,15 +21,14 @@
 }
 
 .dark-mode__subtitle {
-   width: 578px;
-   font-size: 18px;
-   line-height: 24px;
+   max-width: 578px;
+   color: inherit;
    margin: 0 auto;
 }
 
 .dark-mode__img-block {
-   width: 600px;
-   border-bottom: 2px solid var(--white);
+   max-width: 600px;
+   border-bottom: 2px solid;
    margin: 0 auto;
    display: flex;
    justify-content: center;
@@ -46,7 +47,7 @@
 }
 
 .dark-mode__btn {
-   color: var(--white);
+   color: inherit;
    text-transform: uppercase;
 }
 
@@ -55,4 +56,55 @@
    margin-top: 5px;
    letter-spacing: 2px;
    font-size: 14px;
+}
+
+.dark-regime.dark-mode {
+   background-color: var(--mineShaft);
+   color: var(--white);
+}
+
+.dark-regime .dark-btn {
+   color: var(--westSide);
+}
+
+.dark-regime .dark-btn svg path {
+   fill: var(--westSide)
+}
+
+.dark-regime .dark-mode__img-block {
+   border-color: var(--white);
+}
+
+.light-regime.dark-mode {
+   background-color: var(--white);
+   color: var(--mineShaft);
+}
+
+.light-regime .light-btn {
+   color: var(--westSide);
+}
+
+.light-regime .light-btn svg path {
+   fill: var(--westSide)
+}
+
+.light-regime .dark-mode__img-block {
+   border-color: var(--mercury);
+}
+
+
+@media (max-width: 750px) {
+   .dark-mode__image {
+      width: 300px;
+   }
+
+   .dark-mode {
+      padding: 80px 0;
+   }
+}
+
+@media (max-width: 450px) {
+   .dark-mode__image {
+      width: 270px;
+   }
 }

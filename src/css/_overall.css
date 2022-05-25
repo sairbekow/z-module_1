@@ -1,3 +1,15 @@
+body {
+   font-family: 'Poppins', sans-serif;
+   color: var(--mineShaft);
+   font-size: 16px;
+   position: relative;
+}
+
+.overlay {
+   height: 110vh;
+   overflow: hidden;
+}
+
 .container {
    max-width: 1198px;
    padding: 0 15px;
@@ -11,12 +23,21 @@
    font-size: 14px;
    background-color: var(--mineShaft);
    border-radius: 4px;
-   color: #fff;
+   color: var(--white);
    transition-duration: 0.3s;
+   border: 2px solid transparent;
 }
 
 .btn:hover {
    background-color: var(--tundora);
+}
+
+.btn:focus {
+   border: 2px solid var(--malibu);
+}
+
+.btn:active {
+   transform: scale(0.98)
 }
 
 .section-name {
@@ -29,3 +50,43 @@
    font-size: 32px;
    line-height: 36px;
 }
+
+.subtitle {
+   font-size: 18px;
+   line-height: 24px;
+   color: var(--doveGray);
+}
+
+.d-none {
+   display: none;
+}
+
+.d-block {
+   display: block;
+}
+
+@media (max-width: 870px) {
+   .title {
+      font-size: 24px;
+      line-height: 28px;
+   }
+
+   .subtitle {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 750px) {
+   body {
+      font-size: 15px;
+   }
+
+   .btn {
+      font-size: 12px;
+   }
+}
+
+
+
+
+

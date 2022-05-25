@@ -3,25 +3,11 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
-const TerserWebpackPlugin = require("terser-webpack-plugin")
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin")
 const SvgoPlugin = require("./svgo.config")
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
-
-// const optimization = () => {
-//   const config = {
-//
-//   }
-//   if(isProd) {
-//     config.minimizer = [
-//       new CssMinimizerPlugin(),
-//       new TerserWebpackPlugin()
-//     ]
-//   }
-//   return config
-// }
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -33,7 +19,7 @@ module.exports = {
     assetModuleFilename: "assets/img/[name][ext]"
   },
   devServer: {
-    port: 4000,
+    port: 3000,
     hot: isDev
   },
   resolve: {
