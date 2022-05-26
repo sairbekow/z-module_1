@@ -41,7 +41,7 @@
    width: 20%;
 }
 
-.timer__item span {
+.timer__item b {
    font-weight: 700;
    font-size: 24px;
    display: block;
@@ -62,7 +62,7 @@
       width: 500px;
    }
 
-   .timer__item span {
+   .timer__item b {
       font-size: 18px;
    }
 }
@@ -82,7 +82,7 @@
       font-size: 28px;
    }
 
-   .timer__item span {
+   .timer__item b {
       font-size: 12px;
    }
 }

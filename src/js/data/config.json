@@ -4,7 +4,7 @@
     { "name": "premium", "price": 99 },
     { "name": "lifetime", "price": 149 }
   ],
-  "timerEndDate": "01.07.2022 11:00",
+  "timerEndDate": ["2022-05-28", "11:00"],
   "testimonials": [
     {
       "name": "Pam Beesly",

@@ -6,6 +6,7 @@ import Pricing from "./modules/Pricing";
 import scrollToSection from "./modules/Header";
 import Modal from "./modules/Modal";
 import setDownloadLinkUrl from "./modules/Download";
+import setTimer from "./modules/Timer";
 
 window.onload = () => {
   Modal()
@@ -14,4 +15,5 @@ window.onload = () => {
   scrollToSection()
   handleChangeColor()
   setDownloadLinkUrl()
+  setTimer()
 }
