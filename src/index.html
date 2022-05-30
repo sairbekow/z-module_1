@@ -26,7 +26,7 @@
               <li class="menu__item"><a class="menu__item-link" href="#faq">FAQ</a></li>
             </ul>
           </nav>
-          <button type="button" class="header__btn btn buy-btn">
+          <button type="button" class="header__btn btn">
             Get this app
           </button>
         </div>
@@ -200,15 +200,15 @@
         <ul class="statistics__list">
           <li class="statistics__item">
             400+
-            <span>Pictures analyzed</span>
+            <h5>Pictures analyzed</h5>
           </li>
           <li class="statistics__item">
             25+
-            <span>Operations per minute</span>
+            <h5>Operations per minute</h5>
           </li>
           <li class="statistics__item">
             95%
-            <span>Accuracy</span>
+            <h5>Accuracy</h5>
           </li>
         </ul>
       </div>
@@ -331,7 +331,7 @@
               <p id="standart" class="pricing-option__price">
                 <span>monthly</span>
               </p>
-              <button type="button" class="pricing-option__btn buy-btn">
+              <button name="standart-btn" type="button" class="pricing-option__btn buy-btn pricing-option__btn_standart">
                 buy now
               </button>
             </li>
@@ -343,7 +343,7 @@
               <p id="premium" class="pricing-option__price">
                 <span>Annually</span>
               </p>
-              <button type="button" class="pricing-option__btn buy-btn">
+              <button  type="button" name="premium-btn" class="pricing-option__btn buy-btn pricing-option__btn_premium">
                 buy now
               </button>
             </li>
@@ -355,7 +355,7 @@
               <p id="lifetime" class="pricing-option__price">
                 <span>Up front</span>
               </p>
-              <button type="button" class="pricing-option__btn buy-btn">
+              <button name="lifetime-btn" type="button" class="pricing-option__btn buy-btn ">
                 buy now
               </button>
             </li>
@@ -511,79 +511,94 @@
     </div>
   </footer>
 
-  <div class="modal d-none">
-    <div class="modal__inner">
-      <div class="modal__block">
-        <button class="modal__close-btn">
-          <img src="./img/close.svg" alt="x">
-        </button>
-        <h4 class="modal__title">
-          Leave a request for the purchase of goods
-        </h4>
-
-        <form class="form">
-          <div class="form__input-block">
-            <input class="form__input" type="text" placeholder="username">
-            <input class="form__input" type="email" placeholder="email">
-          </div>
-
-          <div class="plan">
-            <p class="plan__title">Your plan?</p>
-            <ul class="plan__list">
-              <li class="plan__item plan__item_low-price">
-                <input name="plan" id="low-price" type="radio">
-                <label for="low-price">
-                  standart
-                </label>
-              </li>
-
-              <li class="plan__item plan__item_middle-price">
-                <input name="plan" id="middle-price" type="radio">
-                <label for="middle-price">
-                  premium
-                </label>
-              </li>
-
-              <li class="plan__item plan__item_high-price">
-                <input name="plan" id="high-price" type="radio">
-                <label for="high-price">
-                  lifetime
-                </label>
-              </li>
-            </ul>
-          </div>
-
-          <div class="questionnaire">
-            <p class="questionnaire__title">
-              How did you know about our app?
-            </p>
-            <ul class="questionnaire__list">
-              <li class="questionnaire__item">
-                <input id="facebook" type="checkbox">
-                <label for="facebook"></label>
-                <span>Facebook</span>
-              </li>
-              <li class="questionnaire__item">
-                <input id="instagram" type="checkbox">
-                <label for="instagram"></label>
-                <span>Instagram</span>
-              </li>
-              <li class="questionnaire__item">
-                <input id="youtube" type="checkbox">
-                <label for="youtube"></label>
-                <span>Youtube</span>
-              </li>
-              <li class="questionnaire__item">
-                <input id="other" type="checkbox">
-                <label for="other"></label>
-                <span>Other</span>
-              </li>
-            </ul>
-          </div>
-          <button class="form__btn btn" type="submit">
-            Send
+  <div class="modal__overlay d-none">
+    <div class="modal">
+      <div class="modal__inner">
+        <div class="modal__block">
+          <button class="modal__close-btn">
+            <img src="./img/close.svg" alt="x">
           </button>
-        </form>
+          <h4 class="modal__title">
+            Leave a request for the purchase of goods
+          </h4>
+
+          <form class="form" novalidate>
+            <div class="form__input-wrapper">
+              <div class="form__input-block">
+                <input id="username-field" class="form__input" type="text" placeholder="name">
+                <span class="input-warning"></span>
+              </div>
+              <div class="form__input-block">
+                <input id="email-field" class="form__input" type="email" placeholder="email">
+                <span class="input-warning"></span>
+              </div>
+            </div>
+
+            <div class="plan">
+              <p class="plan__title">Your plan?</p>
+              <ul class="plan__list">
+                <li class="plan__item plan__item_low-price">
+                  <input name="plan" id="low-price" type="radio">
+                  <label for="low-price">
+                    standart
+                  </label>
+                </li>
+
+                <li class="plan__item plan__item_middle-price">
+                  <input name="plan" id="middle-price" type="radio">
+                  <label for="middle-price">
+                    premium
+                  </label>
+                </li>
+
+                <li class="plan__item plan__item_high-price">
+                  <input name="plan" id="high-price" type="radio" checked>
+                  <label for="high-price">
+                    lifetime
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="questionnaire">
+              <p class="questionnaire__title">
+                How did you know about our app?
+              </p>
+              <ul class="questionnaire__list">
+                <li class="questionnaire__item">
+                  <input id="facebook" type="checkbox">
+                  <label for="facebook"></label>
+                  <span>Facebook</span>
+                </li>
+                <li class="questionnaire__item">
+                  <input id="instagram" type="checkbox">
+                  <label for="instagram"></label>
+                  <span>Instagram</span>
+                </li>
+                <li class="questionnaire__item">
+                  <input id="youtube" type="checkbox">
+                  <label for="youtube"></label>
+                  <span>Youtube</span>
+                </li>
+                <li class="questionnaire__item">
+                  <input id="other" type="checkbox">
+                  <label for="other"></label>
+                  <span>Other</span>
+                </li>
+              </ul>
+              <span class="input-warning"></span>
+
+            </div>
+            <button class="form__btn btn" type="submit">
+              Send
+            </button>
+
+            <div class="form__loading-block">
+              <img src="./img/loading.svg" alt="sand clock" class="form__loading-icon">
+              <p class="form__loading-text">Loading...</p>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

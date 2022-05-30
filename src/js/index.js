@@ -1,19 +1,22 @@
 import '../css/style.css'
 
-import handleChangeColor from "./modules/DarkMode";
-import Testimonials from "./modules/Testimonials";
-import Pricing from "./modules/Pricing";
-import scrollToSection from "./modules/Header";
-import Modal from "./modules/Modal";
-import setDownloadLinkUrl from "./modules/Download";
-import setTimer from "./modules/Timer";
+import Testimonials from "./modules/testimonials";
+import scrollToSection from "./modules/Header/scrollToSection";
+import Modal from "./modules/Modal/modal";
+import Download from "./modules/download";
+import Form from "./modules/Modal/form";
+import Timer from "./modules/timer";
+import ThemeColorSwitch from "./modules/themeColorSwitch";
+import PlanPrices from "./modules/planPrices";
 
-window.onload = () => {
-  Modal()
-  Pricing()
-  Testimonials()
+
+window.addEventListener('DOMContentLoaded', () => {
+  new Modal().initialize()
+  new Form().initializeForm()
+  new Timer().start()
+  new ThemeColorSwitch().handleChangeMode()
+  new PlanPrices().render()
+  new Testimonials().render()
+  new Download().setDownloadLinkUrl()
   scrollToSection()
-  handleChangeColor()
-  setDownloadLinkUrl()
-  setTimer()
-}
+})

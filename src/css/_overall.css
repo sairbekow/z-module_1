@@ -5,8 +5,7 @@ body {
    position: relative;
 }
 
-.overlay {
-   height: 110vh;
+.modal-open {
    overflow: hidden;
 }
 

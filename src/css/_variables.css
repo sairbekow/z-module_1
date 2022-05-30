@@ -1,5 +1,4 @@
 /*colors*/
-
 :root {
    --mineShaft: #222;
    --westSide: #ff9209;
@@ -16,4 +15,6 @@
    --heliotrope: #b25df8;
    --alabaster: #fafafa;
    --concrete: #f2f2f2;
+   --fairPink: #ffeeee;
+   --gray: #7e7e7e;
 }

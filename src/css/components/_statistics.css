@@ -20,7 +20,7 @@
    flex-wrap: wrap;
 }
 
-.statistics__item span {
+.statistics__item h5 {
    display: block;
    font-size: 14px;
    text-align: center;
