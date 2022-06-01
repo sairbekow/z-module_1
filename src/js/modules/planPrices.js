@@ -2,17 +2,17 @@ import config from "../data/config.json"
 
 class PlanPrices {
   constructor() {
-    this.standartPlan = document.querySelector("#standart")
-    this.premiumPlan = document.querySelector("#premium")
-    this.lifetimePlan = document.querySelector("#lifetime")
+    this.planPrices = document.querySelectorAll('.pricing-option__price')
+    this.planNames = document.querySelectorAll(".pricing-option__title")
 
-    this.actualPrices = config.plans
+    this.actualPlanData = config.plans
   }
 
   render = () => {
-    this.standartPlan.prepend("$" + this.actualPrices[0].price)
-    this.premiumPlan.prepend("$" + this.actualPrices[1].price)
-    this.lifetimePlan.prepend("$" + this.actualPrices[2].price)
+    for(let i = 0; i < 3; i++) {
+      this.planPrices[i].textContent = `${this.actualPlanData[i].price}$`
+      this.planNames[i].textContent = this.actualPlanData[i].name
+    }
   }
 }
 

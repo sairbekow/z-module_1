@@ -1,11 +1,10 @@
 import config from '../data/config.json'
 
 class Timer {
-  constructor() {
-    this.timerId = null
-  }
+  timerId = null
 
   start = () => {
+    this.render()
     this.timerId = setInterval(this.render, 1000)
   }
 
@@ -17,10 +16,10 @@ class Timer {
     const minutesElement = timer[2]
     const secondsElement = timer[3]
 
-    const remainingDays = this.correctTime(this.calcRemainingDay(this.calcRemainingTime()))
-    const remainingHours = this.correctTime(this.calcRemainingTime().getUTCHours())
-    const remainingMinutes = this.correctTime(this.calcRemainingTime().getMinutes())
-    const remainingSeconds = this.correctTime(this.calcRemainingTime().getSeconds())
+    const remainingDays = this.correctTimeByAddingZero(this.calcRemainingDay(this.calcRemainingTime()))
+    const remainingHours = this.correctTimeByAddingZero(this.calcRemainingTime().getUTCHours())
+    const remainingMinutes = this.correctTimeByAddingZero(this.calcRemainingTime().getMinutes())
+    const remainingSeconds = this.correctTimeByAddingZero(this.calcRemainingTime().getSeconds())
 
     daysElement.textContent = remainingDays
     hoursElement.textContent = remainingHours
@@ -28,7 +27,7 @@ class Timer {
     secondsElement.textContent = remainingSeconds
   }
 
-  correctTime = (time) => {
+  correctTimeByAddingZero = (time) => {
     if(String(time).length < 2) {
       return "0" + time
     }
@@ -38,7 +37,7 @@ class Timer {
   calcRemainingTime = () => {
     const timerBlock = document.querySelector('.timer')
 
-    const deadline = config.timerEndDate.join('T')
+    const deadline = this.correctDateForTimestamp()
 
     const deadlineTimestamp = Date.parse(deadline)
     const currentTimestamp = Date.now()
@@ -47,7 +46,9 @@ class Timer {
 
     if(diff <= 0) {
       clearInterval(this.timerId)
-      timerBlock.remove()
+      timerBlock.className = 'timer d-none'
+    } else {
+      timerBlock.classList.remove('d-none')
     }
 
     return new Date(diff)
@@ -59,6 +60,20 @@ class Timer {
     const days = hours / 24
 
     return Math.floor(days)
+  }
+
+  correctDateForTimestamp = () => {
+    const { timerEndDate } = config
+
+    const date = {
+      day: timerEndDate.match(/^\d{2}/)[0],
+      month: timerEndDate.match(/\.\d{2}/)[0].slice(1),
+      year: timerEndDate.match(/\.\d{4}/)[0].slice(1),
+      hour: timerEndDate.match(/\d{2}:/)[0],
+      minute: timerEndDate.match(/\d{2}$/)[0]
+    }
+
+     return `${date.year}-${date.month}-${date.day}T${date.hour}${date.minute}`
   }
 }
 

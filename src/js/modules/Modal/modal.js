@@ -27,9 +27,6 @@ class Modal {
       case 'premium-btn':
         premiumPlanInput.checked = true
         break
-      case 'lifetime-btn':
-        lifetimePlanInput.checked = true
-        break
       default:
         lifetimePlanInput.checked = true
         break
@@ -40,12 +37,33 @@ class Modal {
   }
 
   static closeModal = (e) => {
+    this.username = document.querySelector('#username-field')
+    this.email = document.querySelector('#email-field')
+    this.warningText = document.querySelectorAll('.input-warning')
+    this.loadingBlock = document.querySelector('.form__loading-block')
+    this.questionnaryCheckboxes = document.querySelectorAll('.questionnaire__item input')
+
     const modal = document.querySelector('.modal__overlay')
     const body = document.body
 
     body.className = ''
     modal.className = 'modal__overlay d-none'
+
+    this.username.value = ""
+    this.email.value = ""
+
+    //reset
+    this.username.classList.remove('empty-field')
+    this.email.classList.remove('empty-field')
+    this.warningText[0].textContent = ''
+    this.warningText[1].textContent = ''
+    this.warningText[2].textContent = ''
+    this.loadingBlock.classList.add('d-none')
+
+    this.questionnaryCheckboxes.forEach(el => {
+      el.checked = false
+    })
   }
 }
 
-export default Modal;
+export default Modal

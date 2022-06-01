@@ -1,20 +1,38 @@
 import config from "../data/config.json"
 
 class Testimonials {
-  constructor() {
-    this.testimonialsStorage = config.testimonials
-    this.allTestimonials = document.querySelectorAll(".comment")
-  }
+    testimonialsListElement = document.querySelector('.testimonials__list')
+    testimonialsStorage = config.testimonials
 
   render = () => {
     for (let i = 0; i < this.testimonialsStorage.length; i++) {
-      const commentText = this.allTestimonials[i].querySelector(".comment__text")
-      const commentAuthor = this.allTestimonials[i].querySelector(".comment__author-name")
-      const commentAuthorJob = this.allTestimonials[i].querySelector(".comment__author-proffession")
+
+      const comment = document.createElement('li')
+      comment.classList.add('comment')
+
+      const commentText = document.createElement('p')
+      commentText.classList.add('comment__text')
+
+      const commentAuthor = document.createElement('div')
+      commentAuthor.classList.add('comment__author')
+
+      const commentAuthorName = document.createElement('p')
+      commentAuthorName.classList.add('comment__author-name')
+
+      const commentAuthorJob = document.createElement('p')
+      commentAuthorJob.classList.add('comment__author-proffession')
+
+      comment.append(commentText)
+      comment.append(commentAuthor)
+
+      commentAuthor.append(commentAuthorName)
+      commentAuthor.append(commentAuthorJob)
 
       commentText.textContent = this.testimonialsStorage[i].text
-      commentAuthor.textContent = this.testimonialsStorage[i].name
+      commentAuthorName.textContent = this.testimonialsStorage[i].name
       commentAuthorJob.textContent = this.testimonialsStorage[i].job
+
+      this.testimonialsListElement.append(comment)
     }
   }
 }

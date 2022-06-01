@@ -51,14 +51,14 @@
 }
 
 
-.pricing-option__price {
+.pricing-option__price{
    font-weight: 400;
    font-size: 108px;
    letter-spacing: 8px;
    margin-top: -10px;
 }
 
-.pricing-option__price span{
+.pricing-option__price-block span{
    font-size: 14px;
    letter-spacing: 2px;
    text-transform: uppercase;

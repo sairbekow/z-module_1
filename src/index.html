@@ -12,29 +12,56 @@
 </head>
 <body>
 <div class="wrapper">
-
   <header class="header">
+    <div class="header__inner">
     <div class="container">
-      <div class="header__inner">
-        <img src="./img/logo.svg" alt="logotype" class="header__logo">
-        <div class="header__nav-panel">
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item"><a class="menu__item-link" href="#features">Features</a></li>
-              <li class="menu__item"><a class="menu__item-link" href="#pricing">Pricing</a></li>
-              <li class="menu__item"><a class="menu__item-link" href="#testimonials">Testimonials</a></li>
-              <li class="menu__item"><a class="menu__item-link" href="#faq">FAQ</a></li>
-            </ul>
-          </nav>
-          <button type="button" class="header__btn btn">
-            Get this app
+        <div class="header__inner-block">
+          <img src="./img/logo.svg" alt="logotype" class="header__logo">
+
+          <div class="header__nav-panel">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a class="menu__item-link" href="#features">Features</a></li>
+                <li class="menu__item"><a class="menu__item-link" href="#pricing">Pricing</a></li>
+                <li class="menu__item"><a class="menu__item-link" href="#testimonials">Testimonials</a></li>
+                <li class="menu__item"><a class="menu__item-link" href="#faq">FAQ</a></li>
+              </ul>
+            </nav>
+            <a type="button" class="header__btn btn get-app" target="_blank">
+              Get this app
+            </a>
+          </div>
+
+          <button type="button" class="burger">
+            <img src="./img/burger-icon.svg" alt="burger" class="burger-icon">
           </button>
         </div>
+      </div>
+      <div class="sidebar">
+        <nav class="sidebar__nav">
+          <button class="sidebar__close-btn">
+            <img src="./img/close.svg" alt="" class="sidebar__close-img">
+          </button>
+          <div class="sidebar__nav-inner">
+            <img src="./img/logo.svg" alt="logotype" class="sidebar__logo">
+
+            <ul class="sidebar__list">
+              <li class="sidebar__item"><a class="sidebar__item-link" href="#features">Features</a></li>
+              <li class="sidebar__item"><a class="sidebar__item-link" href="#pricing">Pricing</a></li>
+              <li class="sidebar__item"><a class="sidebar__item-link" href="#testimonials">Testimonials</a></li>
+              <li class="sidebar__item"><a class="sidebar__item-link" href="#faq">FAQ</a></li>
+            </ul>
+            <a type="button" class="sidebar__btn btn get-app" target="_blank">
+              Get this app
+            </a>
+          </div>
+        </nav>
       </div>
     </div>
   </header>
 
-  <section class="timer">
+  <section class="timer d-none">
+
     <div class="container">
       <div class="timer__inner">
         <h1 class="timer__title">big sale on lifetime plan</h1>
@@ -325,37 +352,40 @@
         <div class="pricing__content">
           <ul class="pricing__list">
             <li class="pricing-option pricing-option_low-price">
-              <h5 class="pricing-option__title">
-                Standard
-              </h5>
-              <p id="standart" class="pricing-option__price">
+              <h5 class="pricing-option__title"></h5>
+              <div id="standart" class="pricing-option__price-block">
+                <b class="pricing-option__price"></b>
                 <span>monthly</span>
-              </p>
-              <button name="standart-btn" type="button" class="pricing-option__btn buy-btn pricing-option__btn_standart">
+              </div>
+              <button name="standart-btn"
+                      type="button"
+                      class="pricing-option__btn buy-btn">
                 buy now
               </button>
             </li>
 
             <li class="pricing-option pricing-option_middle-price">
-              <h5 class="pricing-option__title">
-                Premium
-              </h5>
-              <p id="premium" class="pricing-option__price">
+              <h5 class="pricing-option__title"></h5>
+              <div id="premium" class="pricing-option__price-block">
+                <b class="pricing-option__price"></b>
                 <span>Annually</span>
-              </p>
-              <button  type="button" name="premium-btn" class="pricing-option__btn buy-btn pricing-option__btn_premium">
+              </div>
+              <button type="button"
+                      name="premium-btn"
+                      class="pricing-option__btn buy-btn">
                 buy now
               </button>
             </li>
 
             <li class="pricing-option pricing-option_high-price">
-              <h5 class="pricing-option__title">
-                lifetime
-              </h5>
-              <p id="lifetime" class="pricing-option__price">
+              <h5 class="pricing-option__title"></h5>
+              <div id="lifetime" class="pricing-option__price-block">
+                <b class="pricing-option__price"></b>
                 <span>Up front</span>
-              </p>
-              <button name="lifetime-btn" type="button" class="pricing-option__btn buy-btn ">
+              </div>
+              <button name="lifetime-btn"
+                      type="button"
+                      class="pricing-option__btn buy-btn">
                 buy now
               </button>
             </li>
@@ -381,30 +411,6 @@
 
         <div class="testimonials__content">
           <ul class="testimonials__list">
-
-            <li class="comment">
-              <p class="comment__text"></p>
-              <div class="comment__author">
-                <p class="comment__author-name"></p>
-                <p class="comment__author-proffession"></p>
-              </div>
-            </li>
-
-            <li class="comment">
-              <p class="comment__text"></p>
-              <div class="comment__author">
-                <p class="comment__author-name"></p>
-                <p class="comment__author-proffession"></p>
-              </div>
-            </li>
-
-            <li class="comment">
-              <p class="comment__text"></p>
-              <div class="comment__author">
-                <p class="comment__author-name"></p>
-                <p class="comment__author-proffession"></p>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -427,7 +433,7 @@
           </p>
         </div>
 
-        <a href="#" class="download__link">
+        <a href="#" class="download__link get-app" target="_blank">
           <img class="download__image" src="./img/app-store.svg" alt="app store">
         </a>
       </div>
@@ -437,10 +443,12 @@
   <section id="faq" class="faq">
     <div class="container">
       <div class="faq__inner">
-        <h3 class="faq__title title">
-          faq
-        </h3>
-        <p class="faq__subtitle">Some questions & some answers</p>
+        <div class="faq__header">
+          <h3 class="faq__title title">
+            faq
+          </h3>
+          <p class="faq__subtitle">Some questions & some answers</p>
+        </div>
 
         <div class="faq__content">
           <ul class="faq__list">
@@ -515,7 +523,7 @@
     <div class="modal">
       <div class="modal__inner">
         <div class="modal__block">
-          <button class="modal__close-btn">
+          <button type="button" class="modal__close-btn">
             <img src="./img/close.svg" alt="x">
           </button>
           <h4 class="modal__title">
@@ -593,7 +601,7 @@
               Send
             </button>
 
-            <div class="form__loading-block">
+            <div class="form__loading-block d-none">
               <img src="./img/loading.svg" alt="sand clock" class="form__loading-icon">
               <p class="form__loading-text">Loading...</p>
             </div>

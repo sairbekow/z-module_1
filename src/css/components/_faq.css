@@ -90,4 +90,8 @@
    .faq__item {
       width: 90%;
    }
+
+   .faq__header {
+      margin-left: 30px;
+   }
 }

@@ -11,6 +11,7 @@
    left: 0;
    bottom: 0;
    right: 0;
+   z-index: 100;
 }
 
 .modal__inner {
@@ -72,7 +73,6 @@
 .form__btn {
    margin-top: 16px;
    padding: 11px 65px;
-
 }
 
 .form__loading-block {
@@ -81,7 +81,6 @@
    justify-content: space-between;
    align-items: center;
    margin: 0 auto;
-   display: none;
 }
 
 .form__loading-text {
@@ -215,9 +214,12 @@
 
 @media (max-width: 750px) {
    .modal__inner {
-      width: 400px;
       padding-right: 60px;
       padding-left: 60px;
+   }
+
+   .modal {
+      width: 400px;
    }
 
    .modal__title {
@@ -232,7 +234,7 @@
 }
 
 @media (max-width: 425px) {
-   .modal__inner {
+   .modal {
       width: 310px;
    }
 }

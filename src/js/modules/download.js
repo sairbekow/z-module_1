@@ -1,12 +1,14 @@
 import config from '../data/config.json'
 
 class Download{
-  link = config.appStoreLink
+  actualLink = config.appStoreLink
 
   setDownloadLinkUrl = () => {
-    const downloadLink = document.querySelector('.download__link')
+    const downloadLinks = document.querySelectorAll('.get-app')
 
-    downloadLink.href = this.link
+    for(let link of downloadLinks) {
+      link.href = this.actualLink
+    }
   }
 }
 

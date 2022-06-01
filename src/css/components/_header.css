@@ -1,18 +1,32 @@
 .header {
-   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-   padding: 25px 0;
+   margin-bottom: 90px;
 }
 
 .header__inner {
+   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+   padding: 25px 10px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+   background-color: var(--white);
+}
+
+.header__inner-block {
    display: flex;
    justify-content: space-between;
    align-items: center;
-
 }
 
 .header__nav-panel {
    display: flex;
    align-items: center;
+   justify-content: space-between;
+}
+
+.header__btn {
+   padding: 11px 31px;
 }
 
 .menu__list {
@@ -24,20 +38,87 @@
    color: var(--doveGray);
 }
 
-.menu__item:last-child {
+.burger {
+   display: none;
+   width: 36px;
+   height: 36px;
+   padding: 10px;
+   border-radius: 50%;
+   transition-duration: .4s;
+   cursor: pointer;
+   border: 1px solid transparent;
 }
 
-.header__btn {
-   padding: 11px 31px;
+.burger:hover {
+   background-color: var(--mercury);
+}
+
+.burger:focus {
+   border: 1px solid var(--malibu);
+}
+
+.sidebar {
+   display: none;
+}
+
+.sidebar__nav {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   z-index: 50;
+   top: 0;
+   background-color: var(--white);
+   transition: .3s;
+   right: -800px;
+}
+
+.sidebar__close-btn {
+   position: absolute;
+   top: 35px;
+   right: 23px;
+}
+
+.sidebar__nav-inner {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.sidebar__list {
+   margin-bottom: 52px;
+}
+
+.sidebar__item {
+   color: var(--doveGray);
+   font-size: 15px;
+   text-align: center;
+   margin-bottom: 18px;
+}
+
+.sidebar__logo {
+   margin-bottom: 52px;
+}
+
+.sidebar__btn {
+   padding: 11px 20px;
+   font-size: 13px;
 }
 
 @media (max-width: 835px) {
-   .menu {
+   .header__nav-panel {
       display: none;
    }
 
-   .header__btn {
-      display: none;
+   .sidebar {
+      display: block;
+   }
+
+   .burger {
+      display: block;
    }
 }
 

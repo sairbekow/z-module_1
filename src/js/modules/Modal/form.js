@@ -10,7 +10,7 @@ class Form {
     this.questionnaryCheckboxes = document.querySelectorAll('.questionnaire__item input')
   }
 
-  initializeForm = () => {
+  initialize = () => {
     this.formSubmit.addEventListener('submit', this.submit)
   }
 
@@ -22,22 +22,8 @@ class Form {
       this.loadingBlock.style.display = "flex"
 
       setTimeout(() => {
-        this.username.value = ""
-        this.email.value = ""
-
-        //reset
-        this.username.classList.remove('empty-field')
-        this.email.classList.remove('empty-field')
-        this.warningText[0].style.display = 'none'
-        this.warningText[1].style.display = 'none'
-        this.warningText[1].style.display = 'none'
-        this.loadingBlock.style.display = 'none'
-        this.questionnaryCheckboxes.forEach(el => {
-          el.checked = false
-        })
-
         Modal.closeModal()
-      }, 3000)
+      }, 2000)
     }
   }
 
