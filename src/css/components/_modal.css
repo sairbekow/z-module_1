@@ -62,7 +62,7 @@
 
 }
 
-.form__input.empty-field {
+.form__input.wrong-field {
    background-color: var(--fairPink);
 }
 
@@ -76,6 +76,7 @@
 }
 
 .form__loading-block {
+   display: none;
    padding-top: 30px;
    width: 125px;
    justify-content: space-between;
@@ -236,6 +237,29 @@
 @media (max-width: 425px) {
    .modal {
       width: 310px;
+      font-size: 14px;
+   }
+
+   .modal__inner {
+      padding: 38px 40px 57px;
+   }
+
+   .modal__close-btn {
+      right: -25px;
+      top: -20px;
+   }
+
+   .questionnaire__item {
+      font-size: 13px;
+   }
+
+   .modal__title {
+      font-size: 15px;
+      margin: 0 auto 30px;
+   }
+
+   .input-warning {
+      font-size: 11px;
    }
 }
 

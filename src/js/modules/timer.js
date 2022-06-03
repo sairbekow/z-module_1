@@ -29,7 +29,7 @@ class Timer {
 
   correctTimeByAddingZero = (time) => {
     if(String(time).length < 2) {
-      return "0" + time
+      return `0${time}`
     }
     return time
   }

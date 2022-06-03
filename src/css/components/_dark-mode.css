@@ -1,6 +1,6 @@
 .dark-mode {
    background-color: var(--mineShaft);
-   padding: 100px 0 160px;
+   padding: 103px 0 160px;
    transition-duration: 0.3s;
    color: var(--white);
 }

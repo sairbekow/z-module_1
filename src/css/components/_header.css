@@ -31,11 +31,16 @@
 
 .menu__list {
    display: flex;
+   margin-right: 55px;
 }
 
 .menu__item {
-   margin-right: 42px;
+   font-size: 15px;
    color: var(--doveGray);
+}
+
+.menu__item:not(:last-child) {
+   margin-right: 42px;
 }
 
 .burger {
@@ -69,13 +74,13 @@
    top: 0;
    background-color: var(--white);
    transition: .3s;
-   right: -800px;
+   right: -1000px;
 }
 
 .sidebar__close-btn {
    position: absolute;
    top: 35px;
-   right: 23px;
+   right: 34px;
 }
 
 .sidebar__nav-inner {

@@ -1,8 +1,6 @@
 class Modal {
-  constructor() {
-    this.openModalButtons = document.querySelectorAll('.buy-btn')
-    this.closeBtn = document.querySelector('.modal__close-btn')
-  }
+  openModalButtons = document.querySelectorAll('.buy-btn')
+  closeBtn = document.querySelector('.modal__close-btn')
 
   initialize = () => {
     this.closeBtn.addEventListener('click', Modal.closeModal)
@@ -36,7 +34,7 @@ class Modal {
     modal.className = 'modal__overlay d-block'
   }
 
-  static closeModal = (e) => {
+  static closeModal = () => {
     this.username = document.querySelector('#username-field')
     this.email = document.querySelector('#email-field')
     this.warningText = document.querySelectorAll('.input-warning')
@@ -49,16 +47,17 @@ class Modal {
     body.className = ''
     modal.className = 'modal__overlay d-none'
 
-    this.username.value = ""
-    this.email.value = ""
+    this.username.value = ''
+    this.email.value = ''
 
     //reset
-    this.username.classList.remove('empty-field')
-    this.email.classList.remove('empty-field')
+    this.username.classList.remove('wrong-field')
+    this.email.classList.remove('wrong-field')
+    this.loadingBlock.style.display = "none"
+
     this.warningText[0].textContent = ''
     this.warningText[1].textContent = ''
     this.warningText[2].textContent = ''
-    this.loadingBlock.classList.add('d-none')
 
     this.questionnaryCheckboxes.forEach(el => {
       el.checked = false

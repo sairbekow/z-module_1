@@ -14,17 +14,17 @@
 <div class="wrapper">
   <header class="header">
     <div class="header__inner">
-    <div class="container">
+      <div class="container">
         <div class="header__inner-block">
           <img src="./img/logo.svg" alt="logotype" class="header__logo">
 
           <div class="header__nav-panel">
             <nav class="menu">
               <ul class="menu__list">
-                <li class="menu__item"><a class="menu__item-link" href="#features">Features</a></li>
-                <li class="menu__item"><a class="menu__item-link" href="#pricing">Pricing</a></li>
-                <li class="menu__item"><a class="menu__item-link" href="#testimonials">Testimonials</a></li>
-                <li class="menu__item"><a class="menu__item-link" href="#faq">FAQ</a></li>
+                <li class="menu__item"><a class="menu__item-link smooth-scroll" href="#features">Features</a></li>
+                <li class="menu__item"><a class="menu__item-link smooth-scroll" href="#pricing">Pricing</a></li>
+                <li class="menu__item"><a class="menu__item-link smooth-scroll" href="#testimonials">Testimonials</a></li>
+                <li class="menu__item"><a class="menu__item-link smooth-scroll" href="#faq">FAQ</a></li>
               </ul>
             </nav>
             <a type="button" class="header__btn btn get-app" target="_blank">
@@ -37,26 +37,27 @@
           </button>
         </div>
       </div>
-      <div class="sidebar">
-        <nav class="sidebar__nav">
-          <button class="sidebar__close-btn">
-            <img src="./img/close.svg" alt="" class="sidebar__close-img">
-          </button>
-          <div class="sidebar__nav-inner">
-            <img src="./img/logo.svg" alt="logotype" class="sidebar__logo">
+    </div>
+    <div class="sidebar">
+      <nav class="sidebar__nav">
+        <button class="sidebar__close-btn">
+          <img src="./img/close.svg" alt="" class="sidebar__close-img">
+        </button>
+        <div class="sidebar__nav-inner">
+          <img src="./img/logo.svg" alt="logotype" class="sidebar__logo">
 
-            <ul class="sidebar__list">
-              <li class="sidebar__item"><a class="sidebar__item-link" href="#features">Features</a></li>
-              <li class="sidebar__item"><a class="sidebar__item-link" href="#pricing">Pricing</a></li>
-              <li class="sidebar__item"><a class="sidebar__item-link" href="#testimonials">Testimonials</a></li>
-              <li class="sidebar__item"><a class="sidebar__item-link" href="#faq">FAQ</a></li>
-            </ul>
-            <a type="button" class="sidebar__btn btn get-app" target="_blank">
-              Get this app
-            </a>
-          </div>
-        </nav>
-      </div>
+          <ul class="sidebar__list">
+            <li class="sidebar__item"><a class="sidebar__item-link smooth-scroll" href="#features">Features</a></li>
+            <li class="sidebar__item"><a class="sidebar__item-link smooth-scroll" href="#pricing">Pricing</a></li>
+            <li class="sidebar__item"><a class="sidebar__item-link smooth-scroll" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="sidebar__item"><a class="sidebar__item-link smooth-scroll" href="#faq">FAQ</a></li>
+          </ul>
+          <a type="button" class="sidebar__btn btn get-app" target="_blank">
+            Get this app
+          </a>
+        </div>
+      </nav>
     </div>
   </header>
 
@@ -500,17 +501,17 @@
         <img src="./img/footer_logo.svg" alt="logotype" class="footer__logo">
         <ul class="footer__networks">
           <li class="footer__networks-item">
-            <a href="https://twitter.com">
+            <a href="https://twitter.com" target="_blank">
               <img src="./img/twitter.svg" alt="twitter">
             </a>
           </li>
           <li class="footer__networks-item">
-            <a href="https://instagram.com">
+            <a href="https://instagram.com" target="_blank">
               <img src="./img/instagram.svg" alt="instagram">
             </a>
           </li>
           <li class="footer__networks-item">
-            <a href="https://facebook.com">
+            <a href="https://facebook.com" target="_blank">
               <img src="./img/facebook.svg" alt="facebook">
             </a>
           </li>
@@ -546,21 +547,33 @@
               <p class="plan__title">Your plan?</p>
               <ul class="plan__list">
                 <li class="plan__item plan__item_low-price">
-                  <input name="plan" id="low-price" type="radio">
+                  <input name="plan"
+                         id="low-price"
+                         type="radio"
+                         data-plan-name="standart"
+                         data-plan-price="9">
                   <label for="low-price">
                     standart
                   </label>
                 </li>
 
                 <li class="plan__item plan__item_middle-price">
-                  <input name="plan" id="middle-price" type="radio">
+                  <input name="plan"
+                         id="middle-price"
+                         type="radio"
+                         data-plan-name="premium"
+                         data-plan-price="99">
                   <label for="middle-price">
                     premium
                   </label>
                 </li>
 
                 <li class="plan__item plan__item_high-price">
-                  <input name="plan" id="high-price" type="radio" checked>
+                  <input name="plan"
+                         id="high-price"
+                         type="radio"
+                         data-plan-name="lifetime"
+                         data-plan-price="149">
                   <label for="high-price">
                     lifetime
                   </label>
@@ -601,7 +614,7 @@
               Send
             </button>
 
-            <div class="form__loading-block d-none">
+            <div class="form__loading-block">
               <img src="./img/loading.svg" alt="sand clock" class="form__loading-icon">
               <p class="form__loading-text">Loading...</p>
             </div>

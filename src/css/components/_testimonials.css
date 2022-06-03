@@ -1,6 +1,6 @@
 .testimonials {
    background-color: var(--concrete);
-   padding: 100px 0;
+   padding: 103px 0 100px;
 }
 
 .testimonials__header {
@@ -8,7 +8,7 @@
 }
 
 .testimonials__subtitle {
-   margin: 14px 0 41px;
+   margin: 11px 0 41px;
 }
 
 .testimonials__list {

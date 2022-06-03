@@ -7,15 +7,18 @@ import Form from "./modules/Modal/form"
 import Timer from "./modules/timer"
 import ThemeColorSwitch from "./modules/themeColorSwitch"
 import PlanPrices from "./modules/planPrices"
-import BurgerMenu from "./modules/Header/burgerMenu"
+import SideBar from "./modules/Header/sideBar"
+import scrollToSection from "./modules/Header/scrollToSection";
+
 
 window.addEventListener('DOMContentLoaded', () => {
   new Modal().initialize()
   new Form().initialize()
-  new BurgerMenu().initialize()
+  new SideBar().initialize()
   new Timer().start()
   new ThemeColorSwitch().handleChangeMode()
   new PlanPrices().render()
   new Testimonials().render()
   new Download().setDownloadLinkUrl()
+  scrollToSection()
 })

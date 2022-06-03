@@ -4,7 +4,7 @@
     { "name": "premium", "price": 99 },
     { "name": "lifetime", "price": 149 }
   ],
-  "timerEndDate":  "03.05.2022 11:00",
+  "timerEndDate":  "03.06.2022 23:59",
   "testimonials": [
     {
       "name": "Pam Beesly",
@@ -14,7 +14,7 @@
     {
       "name": "Max Henry",
       "text": "Nulla efficitur auctor hendrerit. Etiam ut orci varius, faucibus libero ac, cursus quam. Aenean porta neque eget consequat fringilla.",
-      "job": "Top Manager Happy Co"
+      "job": "SMM Specialist"
     },
     {
       "name": "Ann Schrute",

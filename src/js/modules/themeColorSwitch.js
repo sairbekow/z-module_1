@@ -16,7 +16,7 @@ class ThemeColorSwitch {
     const hueModeTitle = document.querySelector('.color-mode')
     const hueModeName = document.querySelector('.dark-mode__name')
 
-    hueModeName.textContent = color + " mode"
+    hueModeName.textContent = `${color} mode`
     hueModeTitle.textContent = color
     hueModeBackground.className = `dark-mode ${color}-regime`
   }
